@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Список линков</title>
+</head>
+<body>
+
+<h1>Список линков</h1>
+
+{% for link in links %}
+
+    <div>
+        <div>{{ link.name }}</div>
+        <a href="{{ link.url }}" target="_blank">{{ link.url }}</a>
+        <br>
+        <br>
+    </div>
+
+{% endfor %}
+
+</body>
+</html>
