@@ -1,2 +1,6 @@
 env
 links/db.sqlite3
+links/__pycache__/
+links/links/__pycache__/
+links/url/__pycache__/
+links/url/migrations/__pycache__/
