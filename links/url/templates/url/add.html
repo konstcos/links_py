@@ -9,18 +9,13 @@
 <a href="{% url "url:url_list" %}">main</a>
 <a href="{% url "url:add_link" %}">add</a>
 
-<h1>Список линков</h1>
+<h1>Добавление нового линка</h1>
 
-{% for link in links %}
-
-    <div>
-        <div>{{ link.name }}</div>
-        <a href="{{ link.url }}" target="_blank">{{ link.url }}</a>
-        <br>
-        <br>
-    </div>
-
-{% endfor %}
+<form action="." method="post">
+    {{ link_form.as_p }}
+    {% csrf_token %}
+    <p><input type="submit" value="Add"></p>
+</form>
 
 </body>
 </html>
